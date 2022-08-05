@@ -1,0 +1,266 @@
+section#heading {
+  text-align: center;
+  background: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#heading .text-wrap {
+  font-size: 2rem;
+  margin-top: 5vh;
+  width: 70%;
+}
+
+section#heading .text-wrap h1 {
+  font-size: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 3vh;
+}
+section#heading .text-wrap p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+section#heading .text-wrap p + p {
+  margin-bottom: 5vh;
+}
+.icons-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60%;
+}
+.icons-wrap .icon-link p {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+.icons-wrap .icon-link .icon {
+  cursor: pointer;
+  color: var(--text-dark);
+  font-size: 4rem;
+}
+.icons-wrap .icon-link .icon:hover {
+  color: var(--text-muted);
+}
+
+/* MACBOOK AIR SECTION STYLES */
+section#macbook-air {
+  height: 100vh;
+  background: url(../img/macbookair.jpg) center center/cover no-repeat;
+  position: relative;
+  z-index: 1;
+}
+/* THIS IS THE DARK OVERLAY COVERING THE BACKGROUND IMAGE */
+section#macbook-air::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+section#macbook-air .text-wrap-2 {
+  color: #fff;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 3rem;
+  line-height: 2;
+}
+section#macbook-air .button-wrap {
+  width: 80%;
+  height: 20%;
+  margin: auto;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+section#macbook-air .button-wrap .button {
+  padding: 1rem 2rem;
+  background: var(--btn-secondary);
+  border-radius: 5px;
+}
+section#macbook-air .button-wrap .button:hover {
+  background: #7a4918;
+}
+
+/* MACBOOK PRO SECTION*/
+section#macbook-pro {
+  height: 100vh;
+  background: url(../img/macbookpro.jpg) center center/cover no-repeat;
+  position: relative;
+  z-index: 1;
+}
+/* THIS IS THE DARK OVERLAY COVERING THE BACKGROUND IMAGE */
+section#macbook-pro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+section#macbook-pro .text-wrap-3 {
+  color: #fff;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 3rem;
+  line-height: 2;
+}
+section#macbook-pro .button-wrap {
+  width: 80%;
+  height: 20%;
+  margin: auto;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+section#macbook-pro .button-wrap .button {
+  padding: 1rem 2rem;
+  background: var(--btn-secondary);
+  border-radius: 5px;
+}
+section#macbook-pro .button-wrap .button:hover {
+  background: #7a4918;
+}
+/* GAMING PC SECTION STYLING */
+section#gaming {
+  height: 100vh;
+  background: url(../img/razer.jpg) center center/cover no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+section#gaming .text-wrap-4 {
+  color: #fff;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 3rem;
+  line-height: 2;
+}
+section#gaming .button-wrap {
+  width: 80%;
+  height: 20%;
+  margin: auto;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+section#gaming .button-wrap .button {
+  padding: 1rem 2rem;
+  background: var(--btn-secondary);
+  border-radius: 5px;
+}
+section#gaming .button-wrap .button:hover {
+  background: #7a4918;
+}
+
+/* NOTEBOOK SECTION STYLING*/
+section#notebook {
+  height: 100vh;
+  background: url(../img/envy.jpg) center center/cover no-repeat;
+  position: relative;
+  z-index: 1;
+}
+section#notebook::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+section#notebook .text-wrap-5 {
+  color: #fff;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 3rem;
+  line-height: 2;
+}
+section#notebook .button-wrap {
+  width: 80%;
+  height: 20%;
+  margin: auto;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+section#notebook .button-wrap .button {
+  padding: 1rem 2rem;
+  background: var(--btn-secondary);
+  border-radius: 5px;
+}
+section#notebook .button-wrap .button:hover {
+  background: #7a4918;
+}
+
+/* FOOTER SECTION STYLING */
+footer {
+  background: var(--bg-dark);
+  height: 10vh;
+}
+.footer-wrap {
+  color: #fff;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.footer-wrap p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+.footer-wrap i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.footer-wrap i:hover {
+  color: #ddd;
+}
+
+@media screen and (max-width: 883px) {
+  .icons-wrap {
+    display: block;
+    font-size: 2rem;
+  }
+  .icons-wrap .icon-link .icon {
+    font-size: 3rem;
+  }
+  .icons-wrap .icon-link {
+    margin-top: 6vh;
+  }
+  .icons-wrap .icon-link p {
+    font-size: 1rem;
+  }
+  section#heading .text-wrap h1 {
+    font-size: 2rem;
+  }
+  section#heading .text-wrap p {
+    font-size: 0.8rem;
+  }
+  section#heading .text-wrap p + p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .footer-wrap i {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .footer-wrap p {
+    font-size: 0.5rem;
+  }
+}

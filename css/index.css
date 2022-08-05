@@ -1,0 +1,241 @@
+/* THESE ARE CSS CUSTOM VARIABLES */
+:root {
+  --bg-primary: #2877ee;
+  --bg-secondary: #fafafa;
+  --bg-dark: #252734;
+  --btn-primary: #2877ee;
+  --btn-secondary: #e4811c;
+  --navbar-color: #252734;
+  --text-primary: #2877ee;
+  --text-dark: #252734;
+  --text-muted: rgba(33, 37, 41, 0.75);
+}
+/* GLOBAL STYLES */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+li {
+  list-style: none;
+  color: #fff;
+  cursor: pointer;
+}
+/* NAV AND HEADER STYLES */
+header {
+  background: var(--navbar-color);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+nav {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+}
+nav h2,
+nav .nav-links {
+  flex: 1;
+}
+nav h2 {
+  color: #fff;
+  cursor: pointer;
+}
+nav h2 span {
+  color: var(--text-primary);
+}
+.nav-links a {
+  padding: 0.5rem 1rem;
+}
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+nav .nav-links ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.active {
+  background: var(--bg-primary);
+  border-radius: 10px;
+}
+.active:hover {
+  color: #fff !important;
+}
+.carat {
+  color: #fff;
+}
+/* STYLING FOR DROPDOWN MENU */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  transform: translateX(-20%);
+  background: var(--navbar-color);
+  width: 30vh;
+  height: 30vh;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  /* border-radius: 20px; */
+}
+
+.dropdown ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.nav-links ul li:nth-child(2) {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-links ul li:nth-child(2):hover .dropdown {
+  display: block;
+}
+/* SHOWCASE AREA STYLES */
+section#showcase {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: url(../img/macbook1.jpg) center 35% / cover no-repeat;
+  z-index: 1;
+}
+/* THIS IS THE STYLING FOR THE DARK OVERLAY ON BACKGROUD IMAGE */
+section#showcase:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+#showcase .container {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+#showcase .container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+#showcase .container p {
+  margin-bottom: 2rem;
+}
+#showcase .container .btn {
+  background-color: var(--btn-primary);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  transition: background 0.4s ease-in-out, color 0.4s ease-in-out,
+    transform 0.5s ease-in-out;
+  transform: scale(1);
+}
+#showcase .container .btn:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: bold;
+  transform: scale(1.1);
+}
+/* STYLES FOR MAKING THE NAV RESPONSIVE USING MEDIA QUERIES */
+@media screen and (max-width: 900px) {
+  .show {
+    display: block !important;
+  }
+  nav .hamburger {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #777;
+    border-radius: 10px;
+  }
+  nav .hamburger .lines {
+    width: 60%;
+    position: relative;
+    height: 3px;
+    background: #fff;
+  }
+  nav .hamburger .lines::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background: inherit;
+  }
+  nav .hamburger .lines::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background: inherit;
+  }
+  nav .nav-links {
+    display: none;
+    position: absolute;
+    font-size: 1.2rem;
+    top: 10vh;
+    right: 0;
+    height: 50vh;
+    width: 50%;
+    background: var(--bg-dark);
+  }
+  nav .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+  li a.active {
+    background: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  nav .nav-links {
+    width: 45%;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  nav .nav-links {
+    width: 70%;
+    font-size: 1.2rem;
+  }
+}
